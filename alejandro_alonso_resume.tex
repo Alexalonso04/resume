@@ -86,6 +86,13 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -106,13 +113,12 @@
 %   & Mobile: \href{tel:+13057203963}{+1-305-720-3963} \\
 % \end{tabular*}
 
-
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Georgia Institute of Technology}{Atlanta, GA}
-      {Master of Science in Computer Science (Machine Learning Specialization)}{Jan 2021 -- Present}
+      {Master of Science in Computer Science - Machine Learning Specialization}{Jan 2021 -- Present}
     \resumeSubheading
       {University of Florida}{Gainesville, Florida}
       {Bachelor of Science in Computer Science, Minor in Digital Arts and Sciences}{Dec 2016 -- Dec 2020}
@@ -124,29 +130,35 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Site Reliability Engineer II}{Sunrise, Fl}
-      {American Express}{Jan 2022 -- Present}
+      {American Express}{March 2022 -- Present}
       \resumeItemListStart
-        \resumeItem{Intuitive Servicing Portal: Performance tuning efforts.Contributed to the design of dashboards to enhance visibility of the application. Design of our alerting system to also improve SLA. Performed code analysis to determine strategy to insert monitoring.}
-        \resumeItem{Global Servicing Portal:Uplifted the entire platform to support performance enhancements. Created automation to deploy changes quickly and effectively. Simplified installation of new software in it.Created automation for support teams to use during major events to speed up mean time to restoration}
-        \resumeItem{Summer Internship Served as technical mentor for two consecutive years for summer interns. Designed our team's summer internship program consisting of various projects such as incident categorization using machine learning and observably enhancements for our production applications}
+        \resumeItem{Conducted extensive performance analysis for an internal, state-of-the-art Tier 0 application. This analysis led to a decrease of 80\% of CPU resource utilization across several UI components written in React JS.}
+        % \resumeItem{Created a detailed framework to insert observability within the UI components to comply with business requirements and expectations regarding availability metrics.}
+        \resumeItem{Analyzed internal function-as-a-service components written with the Java Vert.x framework to derive root cause analysis for production issues.}
+        % \resumeItem{Created automation to speed up the version upgrade of a major internal servicing application. This work reduced the number of engineers required to perform changes from 3 to 1.}
+        \resumeItem{Lead the Summer Internship Program of 2023, creating a 10-week program in Machine Learning for 7 interns; while also acting as their technical mentor.}
+        % \resumeItem{Intuitive Servicing Portal: Performance tuning efforts.Contributed to the design of dashboards to enhance the visibility of the application. Design of our alerting system to also improve SLA. Performed code analysis to determine a strategy to insert monitoring.}
+        % \resumeItem{Global Servicing Portal:Uplifted the entire platform to support performance enhancements. Created automation to deploy changes quickly and effectively. Simplified installation of new software in it.Created automation for support teams to use during major events to speed up mean time to restoration}
+        % \resumeItem{Summer Internship Served as technical mentor for two consecutive years for summer interns. Designed our team's summer internship program consisting of various projects such as incident categorization using machine learning and observably enhancements for our production applications}
+        % \resumeItem{Mentored new hires}
       \resumeItemListEnd
     \resumeSubheading
       {Site Reliability Engineer III}{Sunrise, Fl}
-      {American Express}{Jan 2021 -- September}
+      {American Express}{Jan 2021 -- March 2022}
       \resumeItemListStart
-        \resumeItem{Provide support for Tier 0, highly-available servicing applications, with tens of thousands of daily users.}
+        % \resumeItem{Provide support for Tier 0, highly-available servicing applications, with tens of thousands of daily users.}
         \resumeItem{Created automation with Ansible to manage change management for infrastructure with more than 100 servers. This represented a reduction of more than 70\% in time and engineers required to deploy infrastructure configuration changes.}
-        \resumeItem{Leveraged the Ansible framework to create server restart automation that reduced time taken to restart by 65\%, from 15 minutes per server, to 5 minutes. It also reduced the amount of engineers required to quickly orchestrate a zone restart; from 3 engineers, to just 1}
-        \resumeItem{Developed a fully-modular self-healing framework using Ansible for our legacy applications running Java Virtual Machines in IBM's Websphere server. This framework reduced the amount of engineers required to support an application from 10 engineers, down to 4, incurring in significant monetary savings and better resource allocation}
-        \resumeItem{Lead an automation team of 4 engineers charged with maintaining our automation development, including version control, management of our portal, on-boarding resources, documentation, and more.}
+        % \resumeItem{Created automation server restart automation to reduce server downtime to 65\% (from 15min to 5min)}
+        % \resumeItem{Developed a fully modular self-healing framework using Ansible for our legacy applications running Java Virtual Machines in IBM's Websphere server. Reducing the required supporting engineers from 10 to 4.}
+        \resumeItem{Led an automation team of 4 engineers to maintain our automation development, including version control, management of our portal, onboarding resources, documentation, and more.}
       \resumeItemListEnd
     \resumeSubheading
       {Software Engineer Intern}{Sunrise, Fl}
       {American Express}{July 2020 -- August 2020}
       \resumeItemListStart
-        \resumeItem{Developed the Flask backed for an internal web application that allowed teams to report planned outages. This application saved dozens of hours yearly in unnecessary bridges and impacts from planned outages.}
-        \resumeItem{Created a Python-based automation that sent change management email reports on Requests For Change (RFCs) that were close to breaching their SLA time (Service Level Agreement). This report helped improve my organization's change management metrics by 10\% by ensuring timely notifications to leadership and by reminding engineers to close RFCs on time.}
-        % \resumeItem{}
+        \resumeItem{Developed the Flask back-end for an internal web application that allowed teams to report planned outages. This application saved dozens of hours yearly in unnecessary bridges and impacts from planned outages.}
+        \resumeItem{Created a Python-based automation that sent change management email reports on Requests For Change (RFCs) that were close to breaching their SLA time (Service Level Agreement). Improving change management metrics by 10\%.}
+% This report helped improve my organization's change management metrics by 10\% by ensuring timely notifications to leadership and by reminding engineers to close RFCs on time.}
       \resumeItemListEnd
       
 % --------Multiple Positions Heading------------
@@ -161,12 +173,31 @@
   \resumeSubHeadingListEnd
 
 
-%-----------PROJECTS-----------------
+% -----------PROJECTS-----------------
+% \include{modules/ml_experience}
 \section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Project}
-      {Details}
-  \resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Lunar Lander} $|$ \emph{Python, PyTorch, Optuna, MySQL, Docker}}{February 2024 -- March 2024}
+          \resumeItemListStart
+            \resumeItem{Implemented a variation of the Deep Q-Network Reinforcement Learning algorithm to solve OpenAI's Gymnasium's Lunar Lander environment.}
+            \resumeItem{Created studies with Optuna to tune the hyper-parameters of the model.}
+            \resumeItem{Leveraged a containerized MySQL database using docker to store and plot results for training and tuning}
+            \resumeItemListEnd
+    \resumeProjectHeading
+          {\textbf{Thyroid Disease Predictor} $|$ \emph{Python, Scikit-Learn, MatplotLib}}{September 2023 -- October 2022}
+          \resumeItemListStart
+            \resumeItem{Implemented Neural Networks, AdaBoost, and K-Neighbors algorithms to compare and contrast their accuracy in predicting whether a patient was positive for Thyroid disease based on lab results and diagnostics.}
+            \resumeItem{Used data pre-preprocessing techniques such as one-hot encoding, label encoding and standard scaler to prepare a training and testing pipeline in Sckikit-learn.}
+            \resumeItem{Created performance evaluation graphs using Mathplotlib. These included learning curves, validation curves, and confusion matrices. Additionally, created a Loss Curve to evaluate the Neural Network performance.}
+            \resumeItemListEnd
+    \resumeProjectHeading
+          {\textbf{ASL Interpreter} $|$ \emph{Python, Numpy}}{November 2022 -- November 2022}
+          \resumeItemListStart
+            \resumeItem{Leveraged the Viterbi dynamic programming algorithm to recognize words from ASL video sequences.}
+            \resumeItem{Trained a Hidden Markov Chain to build a Viterbi trellis that could reconstruct a word from a sequence of hand movement X and Y coordinates.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
 %
 % --------SKILLS------------
@@ -175,8 +206,8 @@
    \item{
      \textbf{Languages: }{Python, Javascript, Java, C\#}
      \hfill
-     \textbf{Technologies: }{React, Docker, Flask, Ansible}
-   }
+     \textbf{Technologies: }{React, Docker, Flask, Ansible, Jenkins, PyTorch, Scikit Learn, Optuna, MySQL, Bash, Matplotlib}
+    }
  \resumeSubHeadingListEnd
 %-------------------------------------------
 \end{document}
